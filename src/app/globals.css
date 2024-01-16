@@ -1,0 +1,28 @@
+:root {
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+
+  --misty-rose: #ffd9daff;
+  --blush: #ea638cff;
+  --murrey: #89023eff;
+  --gunmetal: #30343fff;
+  --eerie-black: #1b2021ff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--murrey);
+  background: var(--eerie-black);
+}
