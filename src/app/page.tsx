@@ -21,12 +21,5 @@ export default async function Home({ searchParams }: HomeProps) {
     }),
   );
 
-  return (
-    <main className={styles.main}>
-      <CategoryNav
-        activeNavElementLabel={searchParams?.category}
-        navElements={rootCategoriesNavElements}
-      />
-    </main>
-  );
+  return <div className={styles.page}>Main</div>;
 }
