@@ -15,18 +15,27 @@ export type CategoryNavProps = {
   navElements: NavElement[];
 };
 
-function CategoryNav({ navElements }: CategoryNavProps): ReactElement {
+function CategoryNav({ activeNavElementLabel, navElements }: CategoryNavProps): ReactElement {
+  const hasActiveNavElement = Boolean(activeNavElementLabel?.length);
+
   return (
     <nav className={styles.nav}>
-      <Link className={styles.navItem} href="/">
+      <Link
+        className={hasActiveNavElement ? styles.navItem.inactive : styles.navItem.active}
+        href="/"
+      >
         Home
       </Link>
       {navElements.map((navElement) => (
         <Link
-          className={styles.navItem}
+          className={
+            activeNavElementLabel === navElement.label
+              ? styles.navItem.active
+              : styles.navItem.inactive
+          }
           href={{
             pathname: '/',
-            query: navElement.label,
+            query: { category: navElement.label },
           }}
           key={navElement.label}
         >

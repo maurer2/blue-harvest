@@ -1,4 +1,4 @@
-import { style } from '@vanilla-extract/css';
+import { style, styleVariants } from '@vanilla-extract/css';
 
 export const nav = style({
   display: 'grid',
@@ -7,7 +7,17 @@ export const nav = style({
   width: '100%',
 });
 
-export const navItem = style({
-  color: 'var(--misty-rose)',
+const navItemBase = style({
   textTransform: 'capitalize',
+});
+
+export const navItem = styleVariants({
+  active: [
+    navItemBase,
+    {
+      color: 'var(--blush)',
+      textDecoration: 'underline',
+    },
+  ],
+  inactive: [navItemBase, { color: 'var(--misty-rose)' }],
 });
