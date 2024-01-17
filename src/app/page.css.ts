@@ -5,5 +5,4 @@ export const page = style({
   color: 'white',
   display: 'grid',
   minHeight: '100vh',
-  padding: '5rem',
 });
