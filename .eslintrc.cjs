@@ -39,6 +39,7 @@ module.exports = {
         'no-console': 'off',
         'react/no-unused-prop-types': 'off',
         'react/require-default-props': 'off',
+        '@typescript-eslint/consistent-type-definitions': 'off'
       },
       settings: {
         'import/resolver': {
