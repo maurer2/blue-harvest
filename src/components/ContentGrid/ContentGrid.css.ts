@@ -7,8 +7,17 @@ export const grid = style({
   gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
 });
 
-export const gridTitle = style({
+export const gridHeader = style({
+  display: 'flex',
   gridColumn: '1 / -1',
+});
+
+export const gridTitle = style({
+  marginBottom: 0,
+  marginRight: 'auto',
+});
+
+export const gridOrderToggle = style({
   margin: 0,
 });
 

@@ -23,6 +23,6 @@
     },
     "allowImportingTsExtensions": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "reset.d.ts", "src/components/CategoryNav/CategoryNav.css.ts2", "src/components/CategoryNav/CategoryNav.tsx2"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "reset.d.ts"],
   "exclude": ["node_modules"]
 }
