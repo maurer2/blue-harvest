@@ -5,5 +5,9 @@ import * as styles from './page.css';
 // };
 
 export default async function Home() {
-  return <div className={styles.page}>Main</div>;
+  return (
+    <div className={styles.page}>
+      <p>Please select a category in the navigation bar</p>
+    </div>
+  );
 }

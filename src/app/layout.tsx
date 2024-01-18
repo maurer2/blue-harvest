@@ -19,9 +19,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const rootCategories = await getDataFromEndpoint<Record<string, string>>(baseURL);
   const rootCategoriesNavElements: NavElement[] = Object.entries(rootCategories)
     .filter(([label]) => visibleCategories.includes(label))
-    .flatMap(([label, path], index) => ({
+    .flatMap(([label, path]) => ({
       label,
-      order: index,
       path,
     }));
 

@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css';
 
-export const page = style({
+export const container = style({
   padding: '2rem',
 });

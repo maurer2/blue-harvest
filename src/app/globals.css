@@ -17,10 +17,14 @@ body {
 }
 
 body {
-  color: var(--murrey);
+  color: var(--misty-rose);
   background: var(--eerie-black);
 }
 
 dd {
   margin-left: 0;
+}
+
+p {
+  margin-top: 0;
 }

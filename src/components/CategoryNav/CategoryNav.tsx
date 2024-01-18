@@ -9,7 +9,6 @@ import * as styles from './CategoryNav.css';
 
 export type NavElement = {
   label: string;
-  order?: number;
   path: string;
 };
 
