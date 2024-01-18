@@ -2,15 +2,24 @@ import { style, styleVariants } from '@vanilla-extract/css';
 
 export const nav = style({
   background: 'var(--gunmetal)',
-  display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))',
-  padding: '0 2rem',
+  display: 'flex',
+  justifyContent: 'center',
+  marginBottom: '2rem',
+  padding: '0',
+
+  // eslint-disable-next-line perfectionist/sort-objects
+  '@media': {
+    'screen and (min-width: 480px)': {
+      justifyContent: 'start',
+      padding: '0 2rem',
+    },
+  },
 });
 
 const navItemBase = style({
   borderLeft: '1px dotted var(--misty-rose)',
   color: 'var(--misty-rose)',
-  padding: '2rem 0',
+  padding: '1rem',
   textAlign: 'center',
   textTransform: 'capitalize',
 

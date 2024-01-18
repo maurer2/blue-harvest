@@ -4,10 +4,11 @@ export const grid = style({
   counterReset: 'box',
   display: 'grid',
   gap: '2rem',
-  gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
+  gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
 });
 
 export const gridHeader = style({
+  alignItems: 'center',
   display: 'flex',
   gridColumn: '1 / -1',
 });
@@ -15,10 +16,13 @@ export const gridHeader = style({
 export const gridTitle = style({
   marginBottom: 0,
   marginRight: 'auto',
+  marginTop: 0,
 });
 
 export const gridOrderToggle = style({
+  border: 'none',
   margin: 0,
+  padding: '0.5rem',
 });
 
 export const gridBox = style({
