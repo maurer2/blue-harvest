@@ -39,7 +39,8 @@ module.exports = {
         'no-console': 'off',
         'react/no-unused-prop-types': 'off',
         'react/require-default-props': 'off',
-        '@typescript-eslint/consistent-type-definitions': 'off'
+        '@typescript-eslint/consistent-type-definitions': 'off',
+        'jsx-a11y/label-has-associated-control': 'off'
       },
       settings: {
         'import/resolver': {

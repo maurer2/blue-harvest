@@ -15,7 +15,6 @@ type Payload = {
 
 export type Content = {
   category: string;
-  count: number;
   results: unknown[];
 };
 
@@ -27,14 +26,12 @@ export default async function Category({ params }: CategoryProps) {
 
   const content: Content = {
     category,
-    count: 0,
     results: [],
   };
 
   async function getAllPages(currentUrl: string) {
-    const { count, next, results }: Payload = await getDataFromEndpoint(currentUrl);
+    const { next, results } = await getDataFromEndpoint<Payload>(currentUrl);
 
-    content.count = count;
     content.results = [...content.results, results].flat();
 
     if (next !== null) {
