@@ -2,6 +2,7 @@ import type { NavElement } from '@/types';
 import type { Metadata } from 'next';
 
 import CategoryNav from '@/components/CategoryNav/CategoryNav';
+import SearchBox from '@/components/SearchBox/SearchBox';
 import 'modern-normalize/modern-normalize.css';
 
 import './globals.css';
@@ -28,6 +29,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html lang="en">
       <body>
         <CategoryNav navElements={rootCategoriesNavElements} />
+        <SearchBox navElements={rootCategoriesNavElements} />
         <main>{children}</main>
       </body>
     </html>

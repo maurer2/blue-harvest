@@ -40,7 +40,7 @@ function StarshipBox({ content }: ContentGridProps): ReactElement {
   return (
     <div className={styles.grid}>
       <div className={styles.gridHeader}>
-        <h2 className={styles.gridTitle}>Starships</h2>
+        <h2 className={styles.gridTitle}>Starships ({contentWithCustomOrder.length})</h2>
         <button className={styles.gridOrderToggle} onClick={toggleIsOrderedByName} type="button">
           {isOrderedByName ? 'Restore default order' : 'Sort by name'}
         </button>

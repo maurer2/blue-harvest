@@ -40,7 +40,7 @@ function VehicleBox({ content }: ContentGridProps): ReactElement {
   return (
     <div className={styles.grid}>
       <div className={styles.gridHeader}>
-        <h2 className={styles.gridTitle}>Vehicles</h2>
+        <h2 className={styles.gridTitle}>Vehicles ({contentWithCustomOrder.length})</h2>
         <button className={styles.gridOrderToggle} onClick={toggleIsOrderedByName} type="button">
           {isOrderedByName ? 'Restore default order' : 'Sort by name'}
         </button>

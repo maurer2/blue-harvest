@@ -40,7 +40,7 @@ function FilmBox({ content }: FilmBoxProps): ReactElement {
   return (
     <div className={styles.grid}>
       <div className={styles.gridHeader}>
-        <h2 className={styles.gridTitle}>Films</h2>
+        <h2 className={styles.gridTitle}>Films ({contentWithCustomOrder.length})</h2>
         <button className={styles.gridOrderToggle} onClick={toggleIsOrderedByTitle} type="button">
           {isOrderedByTitle ? 'Restore default order' : 'Sort by title'}
         </button>
