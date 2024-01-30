@@ -19,22 +19,9 @@ function FilmBox({ content }: FilmBoxProps): ReactElement {
       return content;
     }
 
-    const sortedByTitle = structuredClone(content).sort((valueA, valueB) => {
-      const titleA = valueA.title.toLowerCase();
-      const titleB = valueB.title.toLowerCase();
-
-      if (titleA < titleB) {
-        return -1;
-      }
-
-      if (titleA > titleB) {
-        return 1;
-      }
-
-      return 0;
-    });
-
-    return sortedByTitle;
+    return structuredClone(content).sort((valueA, valueB) =>
+      valueA.title.localeCompare(valueB.title, 'en', { sensitivity: 'base' }),
+    );
   }, [isOrderedByTitle, content]);
 
   return (

@@ -19,22 +19,9 @@ function StarshipBox({ content }: ContentGridProps): ReactElement {
       return content;
     }
 
-    const sortedByTitle = structuredClone(content).sort((valueA, valueB) => {
-      const nameA = valueA.name.toLowerCase();
-      const nameB = valueB.name.toLowerCase();
-
-      if (nameA < nameB) {
-        return -1;
-      }
-
-      if (nameA > nameB) {
-        return 1;
-      }
-
-      return 0;
-    });
-
-    return sortedByTitle;
+    return structuredClone(content).sort((valueA, valueB) =>
+      valueA.name.localeCompare(valueB.name, 'en', { sensitivity: 'base' }),
+    );
   }, [isOrderedByName, content]);
 
   return (
