@@ -1,3 +1,4 @@
+/* eslint-disable perfectionist/sort-objects */
 import { style } from '@vanilla-extract/css';
 
 export const searchBoxWrapper = style({
@@ -9,7 +10,6 @@ export const searchBoxWrapper = style({
   marginBottom: '2rem',
   padding: '0 1rem',
 
-  // eslint-disable-next-line perfectionist/sort-objects
   '@media': {
     'screen and (min-width: 480px)': {
       padding: '0 2rem',

@@ -1,3 +1,4 @@
+/* eslint-disable perfectionist/sort-objects */
 import { style } from '@vanilla-extract/css';
 
 export const grid = style({
@@ -5,6 +6,7 @@ export const grid = style({
   display: 'grid',
   gap: '2rem',
   gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
+  marginBottom: '2rem',
 });
 
 export const gridHeader = style({
@@ -36,7 +38,6 @@ export const gridBox = style({
   padding: '1rem',
   position: 'relative',
 
-  // eslint-disable-next-line perfectionist/sort-objects
   '::before': {
     color: 'var(--eerie-black)',
     content: 'counter(box)',
